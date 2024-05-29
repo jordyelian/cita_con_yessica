@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te amo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('img6.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .card {
+            cursor: pointer;
+            background-color: #74745e;
+            transition: box-shadow 0.3s ease-in-out;
+            margin: 10px;
+            position: relative;
+        }
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .message {
+            display: none;
+            color: red;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .hearts {
+            color: pink;
+        }
+        .small-image {
+            width: 50%; /* Ajusta este valor según el tamaño deseado */
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        .modal-sm {
+            max-width: 600px;
+        }
+        .modal-sm .modal-dialog {
+            max-width: 500px;
+        }
+        .video-container {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            position: relative;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-content {
+    max-width: 600px; /* Ajusta este valor al tamaño deseado */
+    margin: auto;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card" onclick="showModal('messageModal1')">
+                <img src="img5.jpeg" class="card-img-top" alt="Image 1">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Mensaje para mi bebe</h5>
+                    <p class="card-text">Click aqui preciosa ❤️</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" onclick="showModal('videoModal')">
+                <img src="img3.jpeg" class="card-img-top" alt="Image 2">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Video con mi amor</h5>
+                    <p class="card-text">Click aqui preciosa ❤️</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" onclick="showModal('messageModal3')">
+                <img src="img7.jpeg" class="card-img-top" alt="Image 3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ubicacion de nuestra cita❤️</h5>
+                    <p class="card-text">Click aqui preciosa ❤️</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Card 1 -->
+<div class="modal fade" id="messageModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Yessica Fernanda Dias Pico</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Mi amor,<br><br>
+          Pronto celebraremos 5 maravillosos años juntos, eso me hace sentir muy bien y me da felicidad por cada momento que hemos compartido. Desde el día en que nos conocimos en la universidad hasta nuestro ultimo viaje que lo pasamos increíble mi amor, gracias por todo lo lindo de esta relación.<br><br>
+          Te amo más de lo que las palabras pueden expresar y estoy emocionado por todos los bellos momentos que compartiremos en un futuro. Prometo seguir apoyándote, amándote y cuidándote con todo mi corazón.<br><br>
+          Con todo mi amor,<br>
+          Jordy Elian Figueroa Martinez
+        </p>
+        <img src="loveimg.png" style="width: 190px; height: auto; display: block; margin: 10px auto;" alt="Love Image">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Card 2 -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="videoModalLabel">Para el amor de mi vida</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="video-container">
+          <video controls>
+            <source src="videonuevo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal for Card 3 -->
+<div class="modal fade" id="messageModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel3">Ubicacion para que sepas donde vamos a ir mi amor</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.060957710163!2d-79.86808822523135!3d-2.1302620371305334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d0962120e17%3A0x31933cd8f4ed9047!2sDon%20Parrilla%20Steak%20House%20-%20Samborond%C3%B3n!5e0!3m2!1ses-419!2sec!4v1716946784051!5m2!1ses-419!2sec" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function showMessage(cardNumber) {
+        const messageElement = document.getElementById('message' + cardNumber);
+        messageElement.style.display = 'block';
+    }
+
+    function showModal(modalId) {
+        $('#' + modalId).modal('show');
+    }
+</script>
+
+</body>
+</html>
